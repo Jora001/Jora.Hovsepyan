@@ -1,12 +1,24 @@
-import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
-import { ArrowRight, Linkedin, Github, Mail, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import { ArrowRight, Linkedin, Github, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
+/* ================= ATOMS CONFIG ================= */
+const atoms = Array.from({ length: 24 });
+
+const atomVariants = {
+  animate: {
+    y: [0, -40, 0],
+    x: [0, 20, -20, 0],
+    opacity: [0.3, 0.7, 0.3],
+  },
+};
+
+/* ================= HERO ================= */
 const HeroSection = () => {
   const { t } = useTranslation();
-  const roles = t('hero.roles', { returnObjects: true }) as string[];
+  const roles = t("hero.roles", { returnObjects: true }) as string[];
   const [currentRole, setCurrentRole] = useState(0);
 
   useEffect(() => {
@@ -18,11 +30,35 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-[calc(100vh-5rem)] flex items-center relative overflow-hidden">
+      {/* ===== BACKGROUND GRADIENT ===== */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/30 to-background" />
 
+      {/* ===== ATOM PARTICLES ===== */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {atoms.map((_, i) => (
+          <motion.span
+            key={i}
+            className="absolute w-2 h-2 rounded-full bg-gradient-to-br from-indigo-400 via-cyan-400 to-indigo-400 blur-[1px]"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+            }}
+            variants={atomVariants}
+            animate="animate"
+            transition={{
+              duration: 6 + Math.random() * 6,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: Math.random() * 3,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* ===== CONTENT ===== */}
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-
+          {/* LEFT */}
           <div className="order-2 lg:order-1 space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-sm text-muted-foreground">
               <MapPin className="w-4 h-4 text-accent" />
@@ -30,11 +66,11 @@ const HeroSection = () => {
             </div>
 
             <p className="text-lg text-muted-foreground">
-              {t('hero.greeting')}
+              {t("hero.greeting")}
             </p>
 
             <h1 className="heading-display">
-              {t('Jora Hovsepyan')}
+              Jora Hovsepyan
             </h1>
 
             <div className="h-10 overflow-hidden">
@@ -50,16 +86,16 @@ const HeroSection = () => {
             </div>
 
             <p className="body-large max-w-xl">
-              {t('hero.description')}
+              {t("hero.description")}
             </p>
 
             <div className="flex gap-4 pt-4">
               <Link to="/portfolio" className="btn-accent">
-                {t('hero.cta.portfolio')}
+                {t("hero.cta.portfolio")}
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link to="/contact" className="btn-outline">
-                {t('hero.cta.contact')}
+                {t("hero.cta.contact")}
               </Link>
             </div>
 
@@ -70,12 +106,16 @@ const HeroSection = () => {
               <SocialLink href="https://github.com/Jora001" label="GitHub">
                 <Github className="w-5 h-5" />
               </SocialLink>
-              <SocialLink href="mailto:jorahovsepyan425@gmail.com?subject=Hello Jora&body=Hi!" label="Email">
+              <SocialLink
+                href="mailto:jorahovsepyan425@gmail.com?subject=Hello Jora&body=Hi!"
+                label="Email"
+              >
                 <Mail className="w-5 h-5" />
               </SocialLink>
             </div>
           </div>
 
+          {/* RIGHT */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <motion.div
               className="relative w-[360px] h-[360px]"
@@ -84,13 +124,10 @@ const HeroSection = () => {
               transition={{ duration: 0.8 }}
               whileHover={{ scale: 1.03 }}
             >
-
-              <svg
-                className="absolute inset-0"
-                viewBox="0 0 360 360"
-              >
+              {/* RINGS */}
+              <svg className="absolute inset-0" viewBox="0 0 360 360">
                 <defs>
-                  <linearGradient id="ringGradient" gradientUnits="userSpaceOnUse">
+                  <linearGradient id="ringGradient">
                     <stop offset="0%" stopColor="#6366f1" />
                     <stop offset="50%" stopColor="#22d3ee" />
                     <stop offset="100%" stopColor="#6366f1" />
@@ -107,7 +144,7 @@ const HeroSection = () => {
                   strokeDasharray="8 14"
                   initial={{ strokeDashoffset: 400 }}
                   animate={{ strokeDashoffset: 0 }}
-                  transition={{ duration: 3, ease: "easeOut" }}
+                  transition={{ duration: 3 }}
                 />
 
                 <motion.circle
@@ -119,7 +156,7 @@ const HeroSection = () => {
                   strokeWidth="3"
                   strokeDasharray="1 22"
                   animate={{ rotate: 360 }}
-                  transform-origin="50% 50%"
+                  style={{ transformOrigin: "50% 50%" }}
                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 />
               </svg>
@@ -128,11 +165,10 @@ const HeroSection = () => {
               <motion.div
                 className="absolute inset-6 rounded-full overflow-hidden shadow-premium-lg border-4 border-background"
                 whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.5 }}
               >
-                <motion.img
-                  src="/public/assets/jor.jpg"
-                  alt="Jora Hovsepyan - Software Engineer"
+                <img
+                  src="/assets/jor.jpg"
+                  alt="Jora Hovsepyan"
                   className="w-full h-full object-cover rounded-full"
                 />
               </motion.div>
@@ -155,16 +191,15 @@ const HeroSection = () => {
                   </span>
                 </div>
               </motion.div>
-
             </motion.div>
           </div>
-
         </div>
       </div>
     </section>
   );
 };
 
+/* ================= SOCIAL LINK ================= */
 const SocialLink = ({
   href,
   label,
