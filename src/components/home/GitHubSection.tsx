@@ -13,7 +13,7 @@ const githubRepos = [
     languageColor: '#3178c6',
     stars: 1247,
     forks: 234,
-    url: 'https://github.com',
+    url: 'https://github.com/Jora001',
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const githubRepos = [
     languageColor: '#f1e05a',
     stars: 892,
     forks: 178,
-    url: 'https://github.com',
+    url: 'https://github.com/Jora001',
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const githubRepos = [
     languageColor: '#3178c6',
     stars: 567,
     forks: 98,
-    url: 'https://github.com',
+    url: 'https://github.com/Jora001',
   },
   {
     id: 4,

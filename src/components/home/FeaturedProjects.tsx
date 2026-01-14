@@ -1,8 +1,34 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionHeader from "@/components/ui/SectionHeader";
 
+// ===== ExpandableText կոմպոնենտ =====
+interface ExpandableTextProps {
+  text: string;
+  limit?: number;
+}
+
+const ExpandableText: React.FC<ExpandableTextProps> = ({ text, limit = 120 }) => {
+  const [expanded, setExpanded] = useState(false);
+
+  if (text.length <= limit) return <p>{text}</p>;
+
+  return (
+    <p className="text-sm text-muted-foreground leading-relaxed">
+      {expanded ? text : `${text.slice(0, limit)}...`}
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="ml-2 text-accent font-semibold hover:underline"
+      >
+        {expanded ? "Show less" : "Show more"}
+      </button>
+    </p>
+  );
+};
+
+// ===== FeaturedProjects կոմպոնենտ =====
 const bgBlobs = [
   "bg-purple-500/30",
   "bg-cyan-500/30",
@@ -74,14 +100,17 @@ const FeaturedProjects = () => {
                 </div>
 
                 {/* CONTENT */}
-                <div className="relative p-6">
+                <div className="relative p-6 flex flex-col">
                   <h3 className="font-serif text-xl font-semibold mb-3 transition-colors group-hover:text-accent">
                     {t(`home.offer.cards.${card.key}.title`)}
                   </h3>
 
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {t(`home.offer.cards.${card.key}.description`)}
-                  </p>
+                  <div className="flex-1">
+                    {/* Show More հանված է այս քարտերից */}
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {t(`home.offer.cards.${card.key}.description`)}
+                    </p>
+                  </div>
 
                   <span className="block mt-4 h-[2px] w-0 bg-accent transition-all duration-500 group-hover:w-12" />
                 </div>
@@ -99,11 +128,11 @@ const FeaturedProjects = () => {
                 {t("home.extra.title")}
               </h3>
 
-              <p className="text-muted-foreground leading-relaxed">
+              {/* Show More հանված է այս տեքստերից */}
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {t("home.extra.web3")}
               </p>
-
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {t("home.extra.mindset")}
               </p>
             </div>
@@ -154,9 +183,10 @@ const FeaturedProjects = () => {
                   <h3 className="font-serif text-xl font-semibold">
                     {t("home.competitions.items.2023.title")}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {t("home.competitions.items.2023.description")}
-                  </p>
+                  <ExpandableText
+                    text={t("home.competitions.items.2023.description")}
+                    limit={120}
+                  />
                 </div>
               </motion.div>
             </AnimatedSection>
@@ -181,14 +211,85 @@ const FeaturedProjects = () => {
                   <h3 className="font-serif text-xl font-semibold">
                     {t("home.competitions.items.2025.title")}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {t("home.competitions.items.2025.description")}
-                  </p>
+                  <ExpandableText
+                    text={t("home.competitions.items.2025.description")}
+                    limit={120}
+                  />
                 </div>
               </motion.div>
             </AnimatedSection>
           </div>
         </div>
+
+        {/* ===== COMPETITIONS FOOTNOTE / PHILOSOPHY ===== */}
+        <div className="mt-24 max-w-3xl mx-auto text-center">
+          <AnimatedSection>
+            {/* Show More հանված է */}
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {t("home.competitions.outro")}
+            </p>
+            <span className="block mx-auto mt-6 h-[2px] w-16 bg-accent rounded-full" />
+          </AnimatedSection>
+        </div>
+
+        {/* ===== HACKATHON INSIGHTS ===== */}
+        {/* <div className="mt-24 grid md:grid-cols-2 gap-10"> */}
+          {/* INSIGHT 1 */}
+          {/* <AnimatedSection>
+            <motion.div
+              whileHover={{ y: -8 }}
+              transition={{ duration: 0.3 }}
+              className="group rounded-2xl overflow-hidden bg-card/70 backdrop-blur-md border border-border/50 shadow-md hover:shadow-premium"
+            >
+              <div className="relative aspect-video overflow-hidden">
+                <img
+                  src="/assets/m6.jpg"
+                  alt={t("home.competitions.highlights.first.title")}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              </div>
+
+              <div className="p-6 space-y-3">
+                <h3 className="font-serif text-xl font-semibold">
+                  {t("home.competitions.highlights.first.title")}
+                </h3>
+                <ExpandableText
+                  text={t("home.competitions.highlights.first.description")}
+                  limit={120}
+                />
+              </div>
+            </motion.div>
+          </AnimatedSection> */}
+
+          {/* INSIGHT 2 */}
+          {/* <AnimatedSection delay={0.15}>
+            <motion.div
+              whileHover={{ y: -8 }}
+              transition={{ duration: 0.3 }}
+              className="group rounded-2xl overflow-hidden bg-card/70 backdrop-blur-md border border-border/50 shadow-md hover:shadow-premium"
+            >
+              <div className="relative aspect-video overflow-hidden">
+                <img
+                  src="/assets/hackathon-2.jpg"
+                  alt={t("home.competitions.highlights.second.title")}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              </div>
+
+              <div className="p-6 space-y-3">
+                <h3 className="font-serif text-xl font-semibold">
+                  {t("home.competitions.highlights.second.title")}
+                </h3>
+                <ExpandableText
+                  text={t("home.competitions.highlights.second.description")}
+                  limit={120}
+                />
+              </div>
+            </motion.div>
+          </AnimatedSection> */}
+        {/* </div> */}
       </div>
     </section>
   );
