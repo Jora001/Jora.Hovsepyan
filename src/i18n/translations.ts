@@ -56,8 +56,34 @@ export const translations = {
               description:
                 "Proficient in SAS Base Statistical Programming for data preparation, analysis, and reporting using statistical and data-driven approaches.",
             },
+    
           },
+         
         },
+         recommendations: {
+    title: "What colleagues and teammates say about me",
+  },
+certificates: {
+  title: "Certificates & Verified Badges",
+  subtitle: "Verified certificates and badges based on real-world skills",
+  items: {
+    aiMasters: { title: "Carrer Essentials in Software Development", location: "Microsoft, Linkedin Learning" },
+    testit: { title: "6-Month JavaScript / React.js Course", location: "Gyumri Information Technologies Center" },
+    piscine42: { title: "Advanced React Online coursee", location: "Meta, Coursearea" },
+    meetup: { title: "SAS 9.4 BASE Programming", location: "Linkedin Learning" },
+    sas: { title: "SAS Base Programming Certificate", location: "SAS Online Certification Great Learning" },
+    hackathon1: { title: "React.js Tutorial", location: "Great Learning online course" },
+    hackathon2: { title: "Node.js Certificate", location: "LinkedIn Learning" },
+    hackathon3: { title: "Analyze data with SQL", location: "Code Academy Yerevan" },
+    hackathon4: { title: "Business development & Sales", location: "GTC By EIF Gyumri" },
+    hackathon5: { title: "Express.js Node.js build powerfull apps", location: "LinkedIn Learning" },
+    hackathon6: { title: "SAS BASE Professional Badges", location: "SAS Academy" },
+    hackathon7: { title: "Sales Monster", location: "Online, Seminar" },
+    hackathon8: { title: "Python for Begginers", location: "Online Course" },
+  },
+},
+
+
 
         extra: {
           title: "Web3 Engineering & Blockchain Systems",
@@ -146,7 +172,9 @@ export const translations = {
           "Վեբ ծրագրավորող",
           "Ուսումնասիրում եմ Web3 և AI տեխնոլոգիաները",
         ],
+   
       },
+
 
       home: {
         featured: {
@@ -154,6 +182,7 @@ export const translations = {
           subtitle:
             "Ինժեներական լուծումներ՝ կատարողականության և վերլուծական մտածողության հիման վրա",
           viewAll: "Դիտել բոլորը",
+          
         },
 
         offer: {
@@ -180,6 +209,30 @@ export const translations = {
             },
           },
         },
+ recommendations: {
+    title: "Իմ մասին գործընկերների և թիմակիցների կարծիքները",
+  },
+ certificates: {
+  title: "Սերտիֆիկատներ և հաստատված Badge-եր",
+  subtitle: "Վավերացված սերտիֆիկատներ և badge-եր՝ հիմնված իրական հմտությունների վրա",
+  items: {
+    aiMasters: { title: "Ծրագրային մշակման կարիերայի հիմնական հմտություններ", location: "Microsoft ընկերության LinkedIn Learning հարթակ" },
+    testit: { title: "JavaScript/React.js 6-ամսյա դասընթաց", location: "Գյումրու Տեղեկատվական Տեխնոլոգիաների Կենտրոն" },
+    piscine42: { title: "React-ի առաջադեմ օնլայն դասընթաց", location: "Meta/Coursearea" },
+
+    meetup: { title: "SAS 9.4 BASE Ծրաագրավորում", location: "Linkedin ուսուցման հարթակ" },
+    sas: { title: "SAS Base ծրագրավորման սերտիֆիկատ", location: "SAS Օնլայն սերտիֆիկացում Great Learning" },
+    hackathon1: { title: "React.js ուսուցողական նյութ", location: "Great Learning օնլայն ուսուցում" },
+    hackathon2: { title: "Node.js սերտիֆիկացում", location: "Linkedin ուսուցման հարթակ" },
+    hackathon3: { title: "Տվյալների վերլուծություն SQL-ի միջոցով", location: "Codeacademy Երևան" },
+    hackathon4: { title: "Բիզնեսի զարգացում և վաճառք", location: "Գյումրու Տեխնոլոգիական Կենտրոն (EIF)" },
+    hackathon5: { title: "Express.js և Node.js՝ հզոր հավելվածների ստեղծում", location: "Linkedin ուսուցման հարթակ" },
+    hackathon6: { title: "SAS պրոֆեսիոնալ բեյդջեր", location: "SAS Ակադեմիա" },
+    hackathon7: { title: "Վաճառքի մոնստր", location: "Օնլայն, Վեբինար" },
+    hackathon8: { title: "Python սկսնակների համար", location: "Օնլայն դասընթաց" },
+  },
+},
+
 
         extra: {
           title: "Ծրագրավորումից այն կողմ",
@@ -270,7 +323,37 @@ export const translations = {
           subtitle:
             "Инженерные решения с фокусом на производительность и аналитику",
           viewAll: "Все проекты",
+          recommendations: {
+  title: "Отзывы коллег и членов команды обо мне",
+}
         },
+certificates: {
+  title: "Сертификаты и подтверждённые бейджи",
+  subtitle: "Подтверждённые сертификаты и бейджи, основанные на реальных навыках",
+  items: {
+    aiMasters: { title: "Основные навыки для карьеры в разработке программного обеспечения", location: "Платформа LinkedIn Learning от Microsoft" },
+    testit: { title: "Учебная программа JavaScript и React.js продолжительностью 6 месяцев", location: "Гюмрийский центр информационных технологий" },
+    piscine42: { title: "Продвинутый онлайн-курс по React", location: "Meta, Coursearea" },
+    meetup: { title: "Программирование SAS 9.4 BASE", location: "Учебная платформа LinkedIn Learning" },
+
+
+
+    sas: { title: "Сертификат SAS Base Programming", location: "Онлайн сертификация Great Learning" },
+    hackathon1: { title: "Учебник по React.js", location: "Great Learning Онлайн курс" },
+    hackathon2: { title: "Сертификат Node.js", location: "Учебная платформа LinkedIn Learning" },
+    hackathon3: { title: "Анализ данных с использованием SQL", location: "Code Academy Ереван" },
+    hackathon4: { title: "Развитие бизнеса и продажи", location: "Гюмрийский технологический центр (EIF)" },
+    hackathon5: { title: "Express.js и Node.js: создание мощных приложений", location: "Учебная платформа LinkedIn Learning" },
+    hackathon6: { title: "Профессиональные бейджи", location: "SAS Academy" },
+    hackathon7: { title: "Монстр продаж Семинар", location: "Онлайн-вебинар" },
+    hackathon8: { title: "Python для начинающих", location: "Онлайн курс" },
+  },
+},
+
+
+  recommendations: {
+    title: "Отзывы коллег и членов команды обо мне",
+  },
 
         competitions: {
           title: "Соревнования и хакатоны",

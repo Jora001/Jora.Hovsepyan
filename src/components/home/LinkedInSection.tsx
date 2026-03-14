@@ -191,10 +191,8 @@ const RecommendationsSection = () => {
 
       {/* ===== CONTENT ===== */}
       <div className="container-custom relative z-10">
-        <SectionHeader
-          title={t("home.recommendations.title")}
-          subtitle={t("home.recommendations.subtitle")}
-        />
+       <SectionHeader title={t("home.recommendations.title")} />
+
 
         <div className="relative mt-12">
           <div className="overflow-hidden">
