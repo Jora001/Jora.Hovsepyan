@@ -1,149 +1,130 @@
-import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
-import { ArrowRight, Github, Star, GitFork, Code2 } from 'lucide-react';
-import AnimatedSection from '@/components/ui/AnimatedSection';
-import SectionHeader from '@/components/ui/SectionHeader';
+"use client";
 
-const githubRepos = [
-  {
-    id: 1,
-    name: 'react-component-library',
-    description: 'A comprehensive collection of reusable React components with TypeScript, Storybook documentation, and full test coverage.',
-    language: 'TypeScript',
-    languageColor: '#3178c6',
-    stars: 1247,
-    forks: 234,
-    url: 'https://github.com/Jora001',
-  },
-  {
-    id: 2,
-    name: 'node-api-starter',
-    description: 'Production-ready Node.js API boilerplate with Express, Prisma, JWT authentication, and comprehensive error handling.',
-    language: 'JavaScript',
-    languageColor: '#f1e05a',
-    stars: 892,
-    forks: 178,
-    url: 'https://github.com/Jora001',
-  },
-  {
-    id: 3,
-    name: 'tailwind-premium-ui',
-    description: 'Beautiful, accessible UI components built with Tailwind CSS. Dark mode support, animations, and customizable themes.',
-    language: 'TypeScript',
-    languageColor: '#3178c6',
-    stars: 567,
-    forks: 98,
-    url: 'https://github.com/Jora001',
-  },
-  {
-    id: 4,
-    name: 'ai-content-tools',
-    description: 'Open-source AI-powered content generation tools. Integrates with OpenAI, supports multiple languages and formats.',
-    language: 'Python',
-    languageColor: '#3572A5',
-    stars: 2134,
-    forks: 456,
-    url: 'https://github.com',
-  },
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import SectionHeader from "@/components/ui/SectionHeader";
+import { ChevronLeft, ChevronRight, MapPin } from "lucide-react";
+
+/* === CONFIG === */
+const VISIBLE = 2;
+const AUTOPLAY_DELAY = 5000;
+
+/* === EVENTS DATA (i18n KEYS) === */
+const events = [
+  { id: 1, key: "aiMasters", image: "/assets/c1.jpg" },
+  { id: 2, key: "testit", image: "/assets/c2.jpg" },
+  { id: 3, key: "piscine42", image: "/assets/c00.jpg" },
+  { id: 4, key: "meetup", image: "/assets/c3.jpg" },
+  { id: 5, key: "sas", image: "/assets/sasbase.jpg" },
+  { id: 6, key: "hackathon1", image: "/assets/c4.jpg" },
+  { id: 7, key: "hackathon2", image: "/assets/c5.jpg" },
+  { id: 8, key: "hackathon3", image: "/assets/c6.jpg" },
+  { id: 9, key: "hackathon4", image: "/assets/c8.jpg" },
+  { id: 10, key: "hackathon5", image: "/assets/cer8.jpg" },
+  { id: 11, key: "hackathon6", image: "/assets/c9.jpg" },
+  { id: 12, key: "hackathon7", image: "/assets/c10.jpg" },
+  { id: 13, key: "hackathon8", image: "/assets/po.jpg" },
 ];
 
-const GitHubSection = () => {
+const EventsCarouselSection = () => {
   const { t } = useTranslation();
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  const maxIndex = events.length - VISIBLE;
+  const step = 100 / events.length;
+
+  useEffect(() => {
+    if (paused) return;
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+    }, AUTOPLAY_DELAY);
+    return () => clearInterval(interval);
+  }, [paused, maxIndex]);
 
   return (
-    <section className="section-padding bg-primary text-primary-foreground">
-      <div className="container-custom">
+    <section className="section-padding relative overflow-hidden">
+      <div className="container-custom relative z-10">
         <SectionHeader
-          title={t('home.github.title')}
-          subtitle={t('home.github.subtitle')}
-          light
+          title={t("home.certificates.title")}
+          subtitle={t("home.certificates.subtitle")}
         />
 
-        {/* Stats Overview */}
-        <AnimatedSection className="mb-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { label: 'Repositories', value: '48+' },
-              { label: 'Total Stars', value: '5.2k' },
-              { label: 'Contributions', value: '2.8k' },
-              { label: 'Followers', value: '890' },
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center p-6 rounded-xl bg-primary-foreground/5 backdrop-blur"
-              >
-                <div className="text-3xl md:text-4xl font-bold text-accent mb-2">{stat.value}</div>
-                <div className="text-sm text-primary-foreground/60">{stat.label}</div>
-              </motion.div>
-            ))}
+        <div
+          className="relative mt-12"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
+          <div className="overflow-hidden">
+            <motion.div
+              className="flex"
+              style={{ width: `${(events.length / VISIBLE) * 100}%` }}
+              animate={{ x: `-${index * step}%` }}
+              transition={{ duration: 0.7, ease: "easeInOut" }}
+            >
+              {events.map((event) => (
+                <div
+                  key={event.id}
+                  style={{ width: `${100 / events.length}%` }}
+                  className="px-6"
+                >
+                  <motion.div
+                    whileHover={{ y: -8 }}
+                    transition={{ type: "spring", stiffness: 200, damping: 18 }}
+                    className="relative group"
+                  >
+                    <div className="absolute -inset-[1px] rounded-[34px] bg-gradient-to-br from-primary/40 via-purple-500/30 to-cyan-400/40 opacity-0 group-hover:opacity-100 blur-xl transition duration-700" />
+
+                    <div className="relative overflow-hidden rounded-[32px] border bg-card shadow-xl">
+                      <div className="relative h-[380px] overflow-hidden">
+                        <img
+                          src={event.image}
+                          alt={t(
+                            `home.certificates.items.${event.key}.title`
+                          )}
+                          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
+                      </div>
+
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h4 className="font-semibold text-lg mb-1">
+                          {t(
+                            `home.certificates.items.${event.key}.title`
+                          )}
+                        </h4>
+                        <div className="flex items-center gap-1 text-sm text-white/80">
+                          <MapPin className="w-4 h-4" />
+                          {t(
+                            `home.certificates.items.${event.key}.location`
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              ))}
+            </motion.div>
           </div>
-        </AnimatedSection>
 
-        {/* Repos Grid */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {githubRepos.map((repo, index) => (
-            <AnimatedSection key={repo.id} delay={index * 0.1}>
-              <motion.a
-                href={repo.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ y: -4 }}
-                className="block p-6 rounded-xl bg-primary-foreground/5 backdrop-blur border border-primary-foreground/10 hover:border-accent/50 transition-all"
-              >
-                <div className="flex items-start justify-between mb-3">
-                  <div className="flex items-center gap-2">
-                    <Code2 className="w-5 h-5 text-accent" />
-                    <h4 className="font-semibold">{repo.name}</h4>
-                  </div>
-                  <Github className="w-5 h-5 text-primary-foreground/40" />
-                </div>
-                
-                <p className="text-sm text-primary-foreground/70 mb-4 line-clamp-2">
-                  {repo.description}
-                </p>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <span
-                      className="w-3 h-3 rounded-full"
-                      style={{ backgroundColor: repo.languageColor }}
-                    />
-                    <span className="text-sm text-primary-foreground/60">{repo.language}</span>
-                  </div>
-                  <div className="flex items-center gap-4 text-sm text-primary-foreground/60">
-                    <span className="flex items-center gap-1">
-                      <Star className="w-4 h-4" />
-                      {repo.stars.toLocaleString()}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <GitFork className="w-4 h-4" />
-                      {repo.forks}
-                    </span>
-                  </div>
-                </div>
-              </motion.a>
-            </AnimatedSection>
-          ))}
-        </div>
-
-        <AnimatedSection delay={0.5} className="mt-10 text-center">
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-primary-foreground/20 text-primary-foreground font-medium hover:bg-primary-foreground/10 transition-colors"
+          <button
+            onClick={() => setIndex((p) => (p <= 0 ? maxIndex : p - 1))}
+            className="absolute -left-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-background shadow hover:scale-110 transition"
           >
-            View All on GitHub
-            <ArrowRight className="w-4 h-4" />
-          </a>
-        </AnimatedSection>
+            <ChevronLeft />
+          </button>
+
+          <button
+            onClick={() => setIndex((p) => (p >= maxIndex ? 0 : p + 1))}
+            className="absolute -right-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-background shadow hover:scale-110 transition"
+          >
+            <ChevronRight />
+          </button>
+        </div>
       </div>
     </section>
   );
 };
 
-export default GitHubSection;
+export default EventsCarouselSection;

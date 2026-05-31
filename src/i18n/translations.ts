@@ -56,8 +56,34 @@ export const translations = {
               description:
                 "Proficient in SAS Base Statistical Programming for data preparation, analysis, and reporting using statistical and data-driven approaches.",
             },
+    
           },
+         
         },
+         recommendations: {
+    title: "What colleagues and teammates say about me",
+  },
+certificates: {
+  title: "Certificates & Verified Badges",
+  subtitle: "Verified certificates and badges based on real-world skills",
+  items: {
+    aiMasters: { title: "Carrer Essentials in Software Development", location: "Microsoft, Linkedin Learning" },
+    testit: { title: "6-Month JavaScript / React.js Course", location: "Gyumri Information Technologies Center" },
+    piscine42: { title: "Advanced React Online coursee", location: "Meta, Coursearea" },
+    meetup: { title: "SAS 9.4 BASE Programming", location: "Linkedin Learning" },
+    sas: { title: "SAS Base Programming Certificate", location: "SAS Online Certification Great Learning" },
+    hackathon1: { title: "React.js Tutorial", location: "Great Learning online course" },
+    hackathon2: { title: "Node.js Certificate", location: "LinkedIn Learning" },
+    hackathon3: { title: "Analyze data with SQL", location: "Code Academy Yerevan" },
+    hackathon4: { title: "Business development & Sales", location: "GTC By EIF Gyumri" },
+    hackathon5: { title: "Express.js Node.js build powerfull apps", location: "LinkedIn Learning" },
+    hackathon6: { title: "SAS BASE Professional Badges", location: "SAS Academy" },
+    hackathon7: { title: "Sales Monster", location: "Online, Seminar" },
+    hackathon8: { title: "Python for Begginers", location: "Online Course" },
+  },
+},
+
+
 
         extra: {
           title: "Web3 Engineering & Blockchain Systems",
@@ -84,11 +110,19 @@ export const translations = {
               description:
                 "We participated in the AI Masters Challenge hackathon, organized in Gyumri by Annaniks and MFM Soft. Over 18 teams took part in the competition, 10 advanced to the jury phase, and the top 6 teams were awarded cash prizes. Our team presented an AI-based Browser Automation solution, where web environment actions were automated using artificial intelligence approaches. The hackathon gave us the opportunity to work on real-world problems, present our solution to the jury, and test it in a competitive environment. The speakers’ presentations, focused on the present and future challenges of artificial intelligence, were particularly impressive. Each talk provided new topics for reflection and inspiration to deepen our knowledge in the AI field.",
             },
+            
             "2025": {
-              title: "IT Test Competition Win: Bug Bounty Boss | EIF GTC — 2023",
+              title: "IT Tesssst Competition Win: Bug Bounty Boss | EIF GTC — 2023",
               description:
                 "On October 29, 2023, our development team took part in a testing competition organized by EIF Gyumri Technology Center (GTC). During the event, we tested the website of the newly opened Armineh’s Library. Within a limited timeframe, we successfully identified and fixed multiple bugs and technical issues, while also proposing effective functional improvements. As a result, our team won the “Bug Bounty Boss” nomination. Following the competition, the organizers and project representatives reached out to us with a collaboration offer, which was a highly motivating and rewarding outcome for our team.",
             },
+
+             "2026": {
+              title: "Bug Bounty Hackathon Yerevan",
+              description:
+                "As the Mireal team, we participated in a Bug Bounty competition, conducting security testing on digital platforms while adhering to ethical and responsible practices. Our goal was to assess the security level of systems, identify potential risks, and contribute to their improvement in line with Responsible Disclosure principles. This experience became an important step in our professional journey, strengthening our analytical thinking, technical skills, and team collaboration. Security is a continuous process, and we are committed to growing further in this field.",
+            },
+            
           },
 
           highlights: {
@@ -146,7 +180,9 @@ export const translations = {
           "Վեբ ծրագրավորող",
           "Ուսումնասիրում եմ Web3 և AI տեխնոլոգիաները",
         ],
+   
       },
+
 
       home: {
         featured: {
@@ -154,6 +190,7 @@ export const translations = {
           subtitle:
             "Ինժեներական լուծումներ՝ կատարողականության և վերլուծական մտածողության հիման վրա",
           viewAll: "Դիտել բոլորը",
+          
         },
 
         offer: {
@@ -180,6 +217,30 @@ export const translations = {
             },
           },
         },
+ recommendations: {
+    title: "Իմ մասին գործընկերների և թիմակիցների կարծիքները",
+  },
+ certificates: {
+  title: "Սերտիֆիկատներ և հաստատված Badge-եր",
+  subtitle: "Վավերացված սերտիֆիկատներ և badge-եր՝ հիմնված իրական հմտությունների վրա",
+  items: {
+    aiMasters: { title: "Ծրագրային մշակման կարիերայի հիմնական հմտություններ", location: "Microsoft ընկերության LinkedIn Learning հարթակ" },
+    testit: { title: "JavaScript/React.js 6-ամսյա դասընթաց", location: "Գյումրու Տեղեկատվական Տեխնոլոգիաների Կենտրոն" },
+    piscine42: { title: "React-ի առաջադեմ օնլայն դասընթաց", location: "Meta/Coursearea" },
+
+    meetup: { title: "SAS 9.4 BASE Ծրաագրավորում", location: "Linkedin ուսուցման հարթակ" },
+    sas: { title: "SAS Base ծրագրավորման սերտիֆիկատ", location: "SAS Օնլայն սերտիֆիկացում Great Learning" },
+    hackathon1: { title: "React.js ուսուցողական նյութ", location: "Great Learning օնլայն ուսուցում" },
+    hackathon2: { title: "Node.js սերտիֆիկացում", location: "Linkedin ուսուցման հարթակ" },
+    hackathon3: { title: "Տվյալների վերլուծություն SQL-ի միջոցով", location: "Codeacademy Երևան" },
+    hackathon4: { title: "Բիզնեսի զարգացում և վաճառք", location: "Գյումրու Տեխնոլոգիական Կենտրոն (EIF)" },
+    hackathon5: { title: "Express.js և Node.js՝ հզոր հավելվածների ստեղծում", location: "Linkedin ուսուցման հարթակ" },
+    hackathon6: { title: "SAS պրոֆեսիոնալ բեյդջեր", location: "SAS Ակադեմիա" },
+    hackathon7: { title: "Վաճառքի մոնստր", location: "Օնլայն, Վեբինար" },
+    hackathon8: { title: "Python սկսնակների համար", location: "Օնլայն դասընթաց" },
+  },
+},
+
 
         extra: {
           title: "Ծրագրավորումից այն կողմ",
@@ -270,7 +331,37 @@ export const translations = {
           subtitle:
             "Инженерные решения с фокусом на производительность и аналитику",
           viewAll: "Все проекты",
+          recommendations: {
+  title: "Отзывы коллег и членов команды обо мне",
+}
         },
+certificates: {
+  title: "Сертификаты и подтверждённые бейджи",
+  subtitle: "Подтверждённые сертификаты и бейджи, основанные на реальных навыках",
+  items: {
+    aiMasters: { title: "Основные навыки для карьеры в разработке программного обеспечения", location: "Платформа LinkedIn Learning от Microsoft" },
+    testit: { title: "Учебная программа JavaScript и React.js продолжительностью 6 месяцев", location: "Гюмрийский центр информационных технологий" },
+    piscine42: { title: "Продвинутый онлайн-курс по React", location: "Meta, Coursearea" },
+    meetup: { title: "Программирование SAS 9.4 BASE", location: "Учебная платформа LinkedIn Learning" },
+
+
+
+    sas: { title: "Сертификат SAS Base Programming", location: "Онлайн сертификация Great Learning" },
+    hackathon1: { title: "Учебник по React.js", location: "Great Learning Онлайн курс" },
+    hackathon2: { title: "Сертификат Node.js", location: "Учебная платформа LinkedIn Learning" },
+    hackathon3: { title: "Анализ данных с использованием SQL", location: "Code Academy Ереван" },
+    hackathon4: { title: "Развитие бизнеса и продажи", location: "Гюмрийский технологический центр (EIF)" },
+    hackathon5: { title: "Express.js и Node.js: создание мощных приложений", location: "Учебная платформа LinkedIn Learning" },
+    hackathon6: { title: "Профессиональные бейджи", location: "SAS Academy" },
+    hackathon7: { title: "Монстр продаж Семинар", location: "Онлайн-вебинар" },
+    hackathon8: { title: "Python для начинающих", location: "Онлайн курс" },
+  },
+},
+
+
+  recommendations: {
+    title: "Отзывы коллег и членов команды обо мне",
+  },
 
         competitions: {
           title: "Соревнования и хакатоны",
