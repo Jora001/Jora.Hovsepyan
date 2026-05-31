@@ -27,10 +27,24 @@ const ExpandableText: React.FC<ExpandableTextProps> = ({ text, limit = 120 }) =>
     </p>
   );
 };
+const skills = [
+  { name: "", icon: "/assets/js.jpg" },
+  { name: "Next.js", icon: "/assets/ts.jpg" },
+  { name: "TypeScript", icon: "/assets/react.jpg" },
+  { name: "Node.js", icon: "/assets/next.jpg" },
+  { name: "Express", icon: "/assets/node.jpg" },
+  { name: "MongoDB", icon: "/assets/abg.jpg" },
+  { name: "MySQL", icon: "/assets/MY.jpg" },
+  { name: "PostgreSQL", icon: "/assets/ppp.jpg" },
+  { name: "SAS", icon: "/assets/Dock.jpg" },
+  { name: "Python", icon: "/assets/web3d.jpg" },
+  { name: "Web3", icon: "/assets/AS.jpg" },
+  { name: "MetaMask", icon: "/assets/ccd.jpg" },
+];
 
 // ===== FeaturedProjects կոմպոնենտ =====
 const bgBlobs = [
-  "bg-purple-500/30",
+  "bg-purple-700/30",
   "bg-cyan-500/30",
   "bg-pink-500/30",
 ];
@@ -155,6 +169,56 @@ const FeaturedProjects = () => {
           </AnimatedSection>
         </div>
 
+
+
+
+
+
+ {/* ===== SKILLS MARQUEE ===== */}
+<div className="mt-24 overflow-hidden relative">
+  <AnimatedSection>
+    <div className="relative">
+      {/* Blur sides */}
+      <div className="absolute left-0 top-0 h-full w-24 z-10 bg-gradient-to-r from-background to-transparent" />
+      <div className="absolute right-0 top-0 h-full w-24 z-10 bg-gradient-to-l from-background to-transparent" />
+
+      <div className="flex gap-8 whitespace-nowrap animate-[marquee_28s_linear_infinite] w-max">
+        {[...skills, ...skills].map((skill, index) => (
+         <motion.div
+  key={index}
+  whileHover={{
+    y: -8,
+    scale: 1.12,
+  }}
+  transition={{ type: "spring", stiffness: 200 }}
+  className="flex items-center justify-center"
+>
+  <img
+    src={skill.icon}
+    alt={skill.name}
+    className="w-16 h-16 object-contain drop-shadow-xl"
+  />
+</motion.div>
+        ))}
+      </div>
+    </div>
+  </AnimatedSection>
+
+  {/* LOCAL STYLE */}
+  <style>
+    {`
+      @keyframes marquee {
+        0% {
+          transform: translateX(0%);
+        }
+
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    `}
+  </style>
+</div>
         {/* ===== COMPETITIONS & HACKATHONS ===== */}
         <div className="mt-32">
           <SectionHeader
@@ -218,6 +282,53 @@ const FeaturedProjects = () => {
                 </div>
               </motion.div>
             </AnimatedSection>
+
+
+
+
+
+
+
+
+
+
+  <AnimatedSection delay={0.15}>
+              <motion.div
+                whileHover={{ y: -8 }}
+                transition={{ duration: 0.3 }}
+                className="group rounded-2xl overflow-hidden bg-card/70 backdrop-blur-md border border-border/50 shadow-md hover:shadow-premium"
+              >
+                <div className="relative aspect-video overflow-hidden">
+                  <img
+                    src="/assets/1771912464612.jpg"
+                    alt="Hackathon 2025"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                </div>
+
+                <div className="p-6 space-y-3">
+                  <h3 className="font-serif text-xl font-semibold">
+                    {t("home.competitions.items.2026.title")}
+                  </h3>
+                  <ExpandableText
+                    text={t("home.competitions.items.2026.description")}
+                    limit={120}
+                  />
+                </div>
+              </motion.div>
+            </AnimatedSection>
+
+
+
+
+
+
+
+
+
+
+
           </div>
         </div>
 

@@ -110,11 +110,19 @@ certificates: {
               description:
                 "We participated in the AI Masters Challenge hackathon, organized in Gyumri by Annaniks and MFM Soft. Over 18 teams took part in the competition, 10 advanced to the jury phase, and the top 6 teams were awarded cash prizes. Our team presented an AI-based Browser Automation solution, where web environment actions were automated using artificial intelligence approaches. The hackathon gave us the opportunity to work on real-world problems, present our solution to the jury, and test it in a competitive environment. The speakers’ presentations, focused on the present and future challenges of artificial intelligence, were particularly impressive. Each talk provided new topics for reflection and inspiration to deepen our knowledge in the AI field.",
             },
+            
             "2025": {
-              title: "IT Test Competition Win: Bug Bounty Boss | EIF GTC — 2023",
+              title: "IT Tesssst Competition Win: Bug Bounty Boss | EIF GTC — 2023",
               description:
                 "On October 29, 2023, our development team took part in a testing competition organized by EIF Gyumri Technology Center (GTC). During the event, we tested the website of the newly opened Armineh’s Library. Within a limited timeframe, we successfully identified and fixed multiple bugs and technical issues, while also proposing effective functional improvements. As a result, our team won the “Bug Bounty Boss” nomination. Following the competition, the organizers and project representatives reached out to us with a collaboration offer, which was a highly motivating and rewarding outcome for our team.",
             },
+
+             "2026": {
+              title: "Bug Bounty Hackathon Yerevan",
+              description:
+                "As the Mireal team, we participated in a Bug Bounty competition, conducting security testing on digital platforms while adhering to ethical and responsible practices. Our goal was to assess the security level of systems, identify potential risks, and contribute to their improvement in line with Responsible Disclosure principles. This experience became an important step in our professional journey, strengthening our analytical thinking, technical skills, and team collaboration. Security is a continuous process, and we are committed to growing further in this field.",
+            },
+            
           },
 
           highlights: {
