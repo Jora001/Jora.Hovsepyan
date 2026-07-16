@@ -12,6 +12,12 @@ const AUTOPLAY_DELAY = 5000;
 
 /* === EVENTS DATA (i18n KEYS) === */
 const events = [
+    { id: 20, key: "global", image: "/assets/global.jpg" },
+
+
+        { id: 20, key: "atlas", image: "/assets/atlas.jpg" },
+        { id: 20, key: "bug", image: "/assets/bug.jpg" },
+
   { id: 1, key: "aiMasters", image: "/assets/c1.jpg" },
   { id: 2, key: "testit", image: "/assets/c2.jpg" },
   { id: 3, key: "piscine42", image: "/assets/c00.jpg" },

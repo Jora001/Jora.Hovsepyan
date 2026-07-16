@@ -55,7 +55,6 @@ const HeroSection = () => {
         ))}
       </div>
 
-      {/* ===== CONTENT ===== */}
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* LEFT */}
@@ -115,7 +114,6 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* RIGHT */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <motion.div
               className="relative w-[360px] h-[360px]"
@@ -198,8 +196,6 @@ const HeroSection = () => {
     </section>
   );
 };
-
-/* ================= SOCIAL LINK ================= */
 const SocialLink = ({
   href,
   label,
