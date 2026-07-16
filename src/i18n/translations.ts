@@ -67,6 +67,10 @@ certificates: {
   title: "Certificates & Verified Badges",
   subtitle: "Verified certificates and badges based on real-world skills",
   items: {
+        global: { title: "Responsible AI in a Global Context Professional Certificate", location: "United Nations University" },
+        atlas: { title: "Atlassian Agile Project Management Professional Certificate", location: "Atlassian" },
+        bug: { title: "Bug Bounty Hackathon", location: "Information Systems Agency of Armenia (ISAA)" },
+
     aiMasters: { title: "Carrer Essentials in Software Development", location: "Microsoft, Linkedin Learning" },
     testit: { title: "6-Month JavaScript / React.js Course", location: "Gyumri Information Technologies Center" },
     piscine42: { title: "Advanced React Online coursee", location: "Meta, Coursearea" },
@@ -118,9 +122,9 @@ certificates: {
             },
 
              "2026": {
-              title: "Bug Bounty Hackathon Yerevan",
+              title: "Bug Bounty Hackathon Yerevan 2026",
               description:
-                "As the Mireal team, we participated in a Bug Bounty competition, conducting security testing on digital platforms while adhering to ethical and responsible practices. Our goal was to assess the security level of systems, identify potential risks, and contribute to their improvement in line with Responsible Disclosure principles. This experience became an important step in our professional journey, strengthening our analytical thinking, technical skills, and team collaboration. Security is a continuous process, and we are committed to growing further in this field.",
+                " As the Team Leader of the Mireal team, I had the opportunity to lead our team during the Bug Bounty competition, where we conducted security testing of digital platforms while following ethical and responsible practices. Our main goal was to assess the security level of systems, identify potential vulnerabilities, and contribute to their improvement in accordance with Responsible Disclosure principles. In my role as a team leader, I coordinated the workflow, supported effective collaboration among team members, and helped drive the process of analyzing and solving technical challenges. This experience became an important milestone in my professional journey, strengthening my analytical thinking, cybersecurity knowledge, leadership skills, and ability to work effectively within a team. Security is a continuous process, and we are committed to further growth, expanding our knowledge, and gaining deeper experience in this field.",
             },
             
           },

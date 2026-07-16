@@ -33,6 +33,10 @@ const recommendations = [
     avatar: "/assets/arman.jpg",
     date: "January 7, 2026",
   },
+  
+
+ 
+
   {
     id: 3,
     name: "Hovhannes Khachatryan",
@@ -43,6 +47,28 @@ const recommendations = [
     avatar: "/assets/hovo.jpg",
     date: "October 18, 2023",
   },
+    {
+    id: 23,
+    name: "Vahag Poghosyan",
+    role: "Software Engineer | Cybersecurity | Python Automation & Linux | Open to Work",
+    text:
+      "Working with Jora is always inspiring. He is an intelligent, proactive, and professional individual who constantly strives to acquire new knowledge and improve his skills and solutions. Jora creates a positive atmosphere within the team, collaborates effortlessly, and is always ready to take on new challenges. He is a true asset to any project and team",
+    linkedinUrl: "https://www.linkedin.com/in/vahag-poghosyan-98458090/",
+    avatar: "/assets/vahag.jpg",
+    date: "February 12, 2026",
+  },
+
+  {
+    id: 25,
+    name: "Vache Zohrabyan",
+    role: "Software Engineer | Systems Programming Enthusiast | 42Yerevan Student",
+    text:
+      "Jora helped me refine my LinkedIn profile and build a focused portfolio that aligned with my goals. I was struggling to present myself properly and find freelance work, and his advice made a real difference. Thanks to his guidance, I landed my first solo project soon after. He has a great sense for how to position developers for real opportunities.",
+    linkedinUrl: "linkedin.com/in/vache-zohrabyan?skipRedirect=true",
+    avatar: "/assets/vache.jpg",
+    date: "April 12, 2026",
+  },
+
   {
     id: 4,
     name: "Hasmik Hunanyan",
@@ -53,6 +79,7 @@ const recommendations = [
     avatar: "/assets/hasmik.jpg",
     date: "January 8, 2026",
   },
+ 
   {
     id: 5,
     name: "Lilit Drnoyan",
@@ -68,7 +95,7 @@ const recommendations = [
     name: "Elmira Papoyan",
     role: "Front-End Web Developer | React.js | Next.js",
     text:
-      "I met Jora Hovsepyan during the Piscine phase at 42 Yerevan, a highly intensive and demanding program that requires strong analytical thinking, self-discipline, and the ability to perform effectively under pressure. Jora consistently demonstrated these qualities throughout the program. He stands out for his structured approach to problem-solving, strong logical reasoning, and attention to detail. When working on complex technical challenges, Jora remains focused, adapts quickly to new conditions, and consistently strives to deliver accurate and efficient solutions. His work clearly reflects a high sense of responsibility and a strong commitment to quality. In team environments, Jora is open, approachable, and collaborative. He communicates effectively, shares his ideas willingly, listens to others, and contributes positively to team dynamics. His goal-oriented mindset, combined with his friendly and professional attitude, makes him a reliable and valued team member. I am confident that Jora has a solid foundation and strong potential in the field of software development and would be a valuable asset to any technical team. I recommend him without hesitation. 🤝😊",
+      " During our time studying together, Jora consistently showed a strong commitment to doing well in our studies. 📚 He works really hard and never gives up, making him a great study partner. 🚀 Jora is excellent at understanding difficult ideas quickly, which helps us study more efficiently. Not only is Jora a hard worker, but he is also very kind and supportive. 🌈 Even when there are tough assignments or a lot of studying to do, he is always there to help and encourage. 🤝 This makes our study sessions positive and teamwork-oriented. It doesn't just make learning easier, but it also makes studying together enjoyable. 😊",
     linkedinUrl: "https://www.linkedin.com/in/jora-hovsepyan-459149265/details/recommendations/",
     avatar: "/assets/elmira.jpg",
     date: "February 14, 2024",
@@ -143,7 +170,9 @@ const recommendations = [
     avatar: "/assets/katya.jpg",
     date: "March 13, 2024",
   },
+
 ];
+
 
 /* === COMPONENT === */
 const RecommendationsSection = () => {
