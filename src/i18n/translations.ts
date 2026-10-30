@@ -116,10 +116,23 @@ certificates: {
             },
             
             "2025": {
-              title: "IT Tesssst Competition Win: Bug Bounty Boss | EIF GTC — 2023",
+              title: "IT Test Competition Win: Bug Bounty Boss | EIF GTC — 2023",
               description:
                 "On October 29, 2023, our development team took part in a testing competition organized by EIF Gyumri Technology Center (GTC). During the event, we tested the website of the newly opened Armineh’s Library. Within a limited timeframe, we successfully identified and fixed multiple bugs and technical issues, while also proposing effective functional improvements. As a result, our team won the “Bug Bounty Boss” nomination. Following the competition, the organizers and project representatives reached out to us with a collaboration offer, which was a highly motivating and rewarding outcome for our team.",
             },
+
+  "2029": {
+              title: "Green Tech Hackathon 2026 – Smart Energy Innovation",
+              description:
+                "Participated in the Green Tech Academy Hackathon 2026 as part of the MirEal team, where we worked intensively for 29 hours to develop and present our smart electricity grid monitoring and predictive maintenance solution. Our project focuses on using IoT sensors, real-time monitoring, and data analytics to detect potential transformer failures early and improve electricity grid reliability. our project advanced to the incubation phase, giving us the opportunity to further develop and validate our solution. This experience strengthened our teamwork, problem-solving, and product development skills while allowing us to take another step toward turning our idea into a real-world solution.",
+            },
+
+ "2028": {
+              title: "Seaside Startup Summit 2026",
+              description:
+                "Participated in Seaside Startup Summit 2026 (SSS26), where I spent an intensive week learning, sharing experiences, and connecting with people from different backgrounds. Throughout this week, I gained valuable knowledge, discovered new perspectives on entrepreneurship, innovation, and product development, and had the opportunity to meet inspiring people, exchange ideas, and build meaningful connections. SSS26 was more than just an event. It was a week full of learning, challenges, new experiences, and opportunities for personal and professional growth. Grateful for all the knowledge, connections, and memories gained throughout this experience. Looking forward to what comes next!",
+            },
+
 
              "2026": {
               title: "Bug Bounty Hackathon Yerevan 2026",

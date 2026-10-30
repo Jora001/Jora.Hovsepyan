@@ -228,7 +228,68 @@ const FeaturedProjects = () => {
 
           <div className="grid md:grid-cols-2 gap-10">
             {/* 2023 */}
-            <AnimatedSection>
+
+
+
+ <AnimatedSection delay={0.15}>
+              <motion.div
+                whileHover={{ y: -8 }}
+                transition={{ duration: 0.3 }}
+                className="group rounded-2xl overflow-hidden bg-card/70 backdrop-blur-md border border-border/50 shadow-md hover:shadow-premium"
+              >
+                <div className="relative aspect-video overflow-hidden">
+                  <img
+                    src="/assets/aua.jpg"
+                    alt="Hackathon 2029"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                </div>
+
+                <div className="p-6 space-y-3">
+                  <h3 className="font-serif text-xl font-semibold">
+                    {t("home.competitions.items.2029.title")}
+                  </h3>
+                  <ExpandableText
+                    text={t("home.competitions.items.2029.description")}
+                    limit={120}
+                  />
+                </div>
+              </motion.div>
+            </AnimatedSection>
+
+
+
+          
+
+
+    <AnimatedSection delay={0.15}>
+              <motion.div
+                whileHover={{ y: -8 }}
+                transition={{ duration: 0.3 }}
+                className="group rounded-2xl overflow-hidden bg-card/70 backdrop-blur-md border border-border/50 shadow-md hover:shadow-premium"
+              >
+                <div className="relative aspect-video overflow-hidden">
+                  <img
+                    src="/assets/seaside.jpg"
+                    alt="Hackathon 2028"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                </div>
+
+                <div className="p-6 space-y-3">
+                  <h3 className="font-serif text-xl font-semibold">
+                    {t("home.competitions.items.2028.title")}
+                  </h3>
+                  <ExpandableText
+                    text={t("home.competitions.items.2028.description")}
+                    limit={120}
+                  />
+                </div>
+              </motion.div>
+            </AnimatedSection>
+  <AnimatedSection>
               <motion.div
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.3 }}
@@ -284,6 +345,7 @@ const FeaturedProjects = () => {
             </AnimatedSection>
 
 
+ 
 
 
 
